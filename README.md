@@ -29,8 +29,8 @@ sorularına cevap verilecektir. Proje kapsamında klasik makine öğrenmesi yön
 Bu projede model eğitimi için 3 veri seti, bağımsız genelleme testi için ise ek bir 4. veri seti kullanılacaktır.
 
 **FLAME (Fire Luminosity Airborne-based Machine learning Evaluation)** — Shamsoshoara, A., Afghah, F., Razi, A., Zheng, L., Fulé, P.Z., Blasch, E. (2021).
-<https://ieee-dataport.org/open-access/flame-dataset-aerial-imagery-pile-burn-detection-using-drones-uavs>
-
+[<https://ieee-dataport.org/open-access/flame-dataset-aerial-imagery-pile-burn-detection-using-drones-uavs>
+](https://www.kaggle.com/datasets/smrutisanchitadas/flame-dataset-fire-classification?resource=download)
 **D-Fire** — de Venâncio, P.V.A.B., Lisboa, A.C., Barbosa, A.V. (2022).
 <https://github.com/gaia-solutions-on-demand/DFireDataset>
 
