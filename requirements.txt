@@ -11,3 +11,5 @@ matplotlib
 pyyaml
 tqdm
 joblib
+matplotlib
+gdown

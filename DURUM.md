@@ -1,6 +1,6 @@
 # Proje Durumu
 
-*Son güncelleme: 2026-10-21*
+*Son güncelleme: 2026-11-09*
 
 **Proje:** D-Fire üzerinde 4 sınıflı (yok / yangın / duman / ikisi) görüntü sınıflandırma. AI For Mankind bağımsız duman testi için kullanılacak.
 **Kararlar:** FLAME ve Corsican projeden çıkarıldı. Görev sınıflandırma; YOLO isteğe bağlı ve en sonda.
@@ -11,6 +11,8 @@
 |---|---|---|
 | 1 | Repo iskeleti | ✅ Bitti |
 | 2 | Veri hazırlama (D-Fire etiket, dedup, bölme) | ✅ Bitti |
+| 2b | Veri analizi (EDA, grafikler) — Faz 1 şartı | ✅ Bitti (`results/eda/`) |
+| 2c | Faz 1 raporu ve sunumu | ✅ Hazır (`rapor/`) |
 | 3 | Klasik ML baseline (HSV+LBP, SVM/RF) | ✅ Bitti |
 | 4 | Derin öğrenme eğitimi (CNN, ResNet50, MobileNetV3) | 🟡 Kod hazır, tam eğitim yapılmadı |
 | 5 | Değerlendirme (eşik, Grad-CAM, AI For Mankind testi) | ⬜ Başlamadı |
@@ -36,6 +38,12 @@
 | Random Forest | 0.809 | 0.779 | 0.63 |
 
 **Derin modeller:** henüz gerçek sonuç yok. Küçük veriyle 1 epoch hızlı test geçti (parametre: CNN 1,2M, MobileNetV3 4,2M, ResNet50 23,5M).
+
+## Faz 1 çıktıları
+- Rapor: `rapor/Faz1_Raporu.docx` ve `.pdf`; sunum: `rapor/Faz1_Sunum.pptx`
+- Veri analizi: `src/eda.py` → `results/eda/` (grafikler, `summary.json`)
+- AI For Mankind v1.0 (744 görüntü) indirildi; yalnızca duman, negatif örnek yok
+- Önemli bulgular: sınıf dengesizliği 7,67×; yangın kutularının %63'ü görüntünün %1'inden küçük; D-Fire'dan %23 yinelenen elendi; iki kaynak arasında parlaklık farkı
 
 ## Sıradaki adımlar
 1. `python -m src.cache_images` ile 224px önbellek üret (`data/cache224`).
