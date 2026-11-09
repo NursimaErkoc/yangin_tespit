@@ -1,8 +1,8 @@
 # Derin Öğrenme Tabanlı Orman Yangını ve Duman Tespiti
 
-Uygulamalı Yapay Zeka Dersi — Dönem Projesi (bireysel) · Öğrenci: Nursima Erkoç
+Uygulamalı Yapay Zeka Dersi — Dönem Projesi | Nursima Erkoç
 
-Anlık ilerleme için bkz. [DURUM.md](DURUM.md). Bu dosya projenin **ne yapmak istediğini, neyi neden seçtiğimizi ve planı** anlatır.
+Anlık ilerleme için bkz. [DURUM.md](DURUM.md). Bu dosya projenin **ne yapmak istediğimi, neyi neden seçtiğimizi ve planı** anlatır.
 
 ## 1. Amaç
 
