@@ -6,6 +6,8 @@
 
 **Öğrenci:** Nursima Erkoç
 
+> **Not (Faz 1, Kasım 2026):** Bu belge, proje öneri aşamasında teslim edilen metindir ve olduğu gibi korunmuştur. Faz 1 çalışmaları sırasında kapsam değişmiştir: **FLAME ve Corsican veri setleri kapsam dışı bırakılmıştır** (FLAME ve Corsican'da duman etiketi bulunmadığı için dört sınıflı etiket şemasıyla uyumsuzdur; ayrıca görüntü alanları birbirinden çok farklıdır). Güncel kapsam: eğitim için **D-Fire**, bağımsız genelleme testi için **AI For Mankind**; görev dört sınıflı görüntü sınıflandırmadır. Güncel bilgiler için bkz. [README.md](README.md), [DURUM.md](DURUM.md) ve [rapor/Faz1_Raporu.pdf](rapor/Faz1_Raporu.pdf). Aşağıdaki Bölüm 2 ve 3 öneri aşamasındaki hâliyle bırakılmıştır.
+
 ---
 
 ## 1. Seçilen Problemin Detaylı Tanımı

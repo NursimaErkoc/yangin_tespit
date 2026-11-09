@@ -32,6 +32,10 @@ Her görüntü şu 4 sınıftan birine atanır:
 
 **Dengesizlik sırası:** (1) çok etiketli çıktı, (2) ağırlıklı kayıp + veri artırma + eşik seçimi, (3) en son çare dış veri. **Koşullu karar:** yangın duyarlılığı bu önlemlerle de zayıf çıkarsa, FLAME'in yangın görüntüleri **yalnızca eğitime** eklenir. Doğrulama ve test D-Fire'da kalır ve ek verinin etkisi ablation olarak raporlanır. Zayıf çıkmazsa eklenmez.
 
+## Öneri raporuyla fark
+
+Öneri aşamasında teslim edilen rapor (`yangin_tespiti_on_rapor.pdf`, `.md`) dört veri seti (D-Fire, FLAME, Corsican, AI For Mankind) içerir. Faz 1'de FLAME ve Corsican kapsam dışı bırakıldı (duman etiketi yok ve alan farkı nedeniyle dört sınıflı etiket şemasıyla uyumsuz). Güncel kapsam yukarıdaki "Kesinleşen kararlar" tablosundadır; Faz 1 çıktıları `rapor/` klasöründedir.
+
 ## 3. Yöntem
 
 **Veri hazırlama:** D-Fire'ın YOLO kutu etiketlerinden görüntü düzeyi etiket üretilir (kutu yok → yok; yalnızca yangın; yalnızca duman; ikisi). Birebir aynı görüntüler hash ile elenir (test'te olanın eğitim kopyası atılır, böylece sızıntı olmaz). D-Fire'ın kendi test bölmesi korunur, eğitimden %15 doğrulama ayrılır.
