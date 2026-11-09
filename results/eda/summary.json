@@ -1,0 +1,79 @@
+{
+  "n_images": 16619,
+  "class_counts": {
+    "yok": 6899,
+    "yangin": 899,
+    "duman": 4526,
+    "ikisi": 4295
+  },
+  "imbalance_ratio_max_min": 7.67,
+  "dedup": {
+    "train": {
+      "ham": 17221,
+      "kalan": 12795,
+      "elenen": 4426
+    },
+    "test": {
+      "ham": 4306,
+      "kalan": 3824,
+      "elenen": 482
+    }
+  },
+  "missing_label_files": 0,
+  "empty_label_files_(yok_sinifi)": 6899,
+  "dfire_boxes": {
+    "toplam": 23799,
+    "yangin": 13760,
+    "duman": 10039,
+    "goruntu_basina_ortalama_kutu": 1.43
+  },
+  "dfire_box_area_median_pct": {
+    "yangin": 0.55,
+    "duman": 19.79
+  },
+  "dfire_small_box_lt1pct_ratio": {
+    "yangin": 0.631,
+    "duman": 0.123
+  },
+  "dfire_image_props_sample": {
+    "ornek": 1500,
+    "modlar": {
+      "RGB": 1497,
+      "RGBA": 3
+    },
+    "genislik_min_medyan_max": [
+      162,
+      800,
+      3456
+    ],
+    "yukseklik_min_medyan_max": [
+      142,
+      533,
+      2304
+    ],
+    "en_yaygin_boyutlar": {
+      "1280x720": 425,
+      "640x360": 351,
+      "480x360": 62,
+      "640x352": 58,
+      "1920x1080": 28
+    }
+  },
+  "afm": {
+    "goruntu": 744,
+    "kanal_sayisi": {
+      "3": 744
+    },
+    "boyutlar": {
+      "640x480": 744
+    },
+    "kutu_toplam": 744,
+    "sadece_duman": true,
+    "kutusuz_goruntu": 0,
+    "kutu_alani_medyan_pct": 1.65
+  },
+  "brightness_mean": {
+    "dfire": 0.371,
+    "afm": 0.463
+  }
+}
