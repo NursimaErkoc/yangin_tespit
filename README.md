@@ -30,7 +30,7 @@ Her görüntü şu 4 sınıftan birine atanır:
 | Esas metrik | Makro-F1 ve sınıf başına duyarlılık | Sınıflar dengesiz; kaçırılan yangın en pahalı hata |
 | YOLO | İsteğe bağlı, en sonda | Önce sınıflandırma tamamlanacak |
 
-**Koşullu karar:** "yangın" sınıfı derin modellerde zayıf çıkarsa, FLAME'in yangın görüntüleri **yalnızca eğitime** eklenir. Doğrulama ve test D-Fire'da kalır ve ek verinin etkisi ablation olarak raporlanır. Zayıf çıkmazsa eklenmez.
+**Dengesizlik sırası:** (1) çok etiketli çıktı, (2) ağırlıklı kayıp + veri artırma + eşik seçimi, (3) en son çare dış veri. **Koşullu karar:** yangın duyarlılığı bu önlemlerle de zayıf çıkarsa, FLAME'in yangın görüntüleri **yalnızca eğitime** eklenir. Doğrulama ve test D-Fire'da kalır ve ek verinin etkisi ablation olarak raporlanır. Zayıf çıkmazsa eklenmez.
 
 ## 3. Yöntem
 
@@ -42,7 +42,7 @@ Her görüntü şu 4 sınıftan birine atanır:
 3. ResNet50 (transfer öğrenme)
 4. MobileNetV3-Large (drone/kenar cihaz için hafif model)
 
-**Eğitim:** sınıf ağırlıklı çapraz entropi, AdamW, cosine öğrenme hızı, epoch başı checkpoint, her model için 3 farklı seed (ortalama ± std raporlanır).
+**Eğitim (çok etiketli):** derin modeller iki bağımsız çıktı üretir: *yangın var/yok* ve *duman var/yok*; 4 sınıf bunlardan türetilir (karışıklık matrisi ve makro-F1 yine 4 sınıf üzerinden raporlanır). Böylece sınıf dengesizliği azalır: yangın içeren 5.194 / içermeyen 11.425 (2,2:1), duman içeren 8.821 / içermeyen 7.798 (1,1:1); tek başına "sadece yangın" sınıfı ise %5,4'tür. Kayıp: `pos_weight`'li BCE; AdamW, cosine öğrenme hızı, epoch başı checkpoint, her model için 3 seed. Eşikler doğrulamada seçilir. Klasik ML baseline 4 sınıflı kalır.
 
 ## 4. Değerlendirme planı
 

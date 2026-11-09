@@ -45,6 +45,9 @@
 - AI For Mankind v1.0 (744 görüntü) indirildi; yalnızca duman, negatif örnek yok
 - Önemli bulgular: sınıf dengesizliği 7,67×; yangın kutularının %63'ü görüntünün %1'inden küçük; D-Fire'dan %23 yinelenen elendi; iki kaynak arasında parlaklık farkı
 
+## Dengesizlik kararı (2026-11-09)
+Eğitim çok etiketli yapıldı (yangın var/yok + duman var/yok, 4 sınıf türetilir). Dış veri (FLAME yangın görüntüleri) yalnızca ilk eğitimde yangın duyarlılığı zayıf çıkarsa, sadece eğitime eklenip ablation olarak raporlanacak. Kod 60 görüntülük alt kümeyle hata vermediği doğrulandı; gerçek eğitim henüz yapılmadı.
+
 ## Sıradaki adımlar
 1. `python -m src.cache_images` ile 224px önbellek üret (`data/cache224`).
 2. Colab not defterini yaz; projeyi ve önbelleği Google Drive'a yükle.
