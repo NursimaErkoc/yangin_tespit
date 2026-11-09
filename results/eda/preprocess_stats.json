@@ -1,0 +1,32 @@
+{
+  "onbellek_dtype": "uint8",
+  "onbellek_sekil_train": [
+    10875,
+    224,
+    224,
+    3
+  ],
+  "ham_piksel_araligi": [
+    0.0,
+    1.0
+  ],
+  "ham_kanal_ortalama": [
+    0.34,
+    0.272,
+    0.243
+  ],
+  "normalize_sonrasi_ortalama": [
+    -0.633,
+    -0.822,
+    -0.725
+  ],
+  "normalize_sonrasi_std": [
+    1.296,
+    1.19,
+    1.159
+  ],
+  "normalize_sonrasi_aralik": [
+    -2.12,
+    2.64
+  ]
+}
