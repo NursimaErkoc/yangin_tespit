@@ -25,7 +25,7 @@ Her görüntü şu 4 sınıftan birine atanır:
 | Eğitim verisi | **D-Fire** (sadece) | Hem yangın hem duman için kutu etiketi var, 4 sınıf eksiksiz üretilebiliyor |
 | Bağımsız test | **AI For Mankind Wildfire Smoke** | Eğitimde hiç görülmeyen kaynak; genelleme ölçülür (yalnızca duman var/yok) |
 | Çıkarılan veriler | FLAME, Corsican | Duman etiketi yok, alan farkı (drone / yer kamerası) ve etiket uyumsuzluğu yaratıyor |
-| Eğitim ortamı | Google Colab (GPU) | Yerelde GPU yok |
+| Eğitim ortamı | Google Colab (GPU) | 
 | Çatı | PyTorch, scikit-learn | |
 | Esas metrik | Makro-F1 ve sınıf başına duyarlılık | Sınıflar dengesiz; kaçırılan yangın en pahalı hata |
 | YOLO | İsteğe bağlı, en sonda | Önce sınıflandırma tamamlanacak |
