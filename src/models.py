@@ -1,7 +1,7 @@
 import torch.nn as nn
 from torchvision import models
 
-NUM_CLASSES = 4
+NUM_CLASSES = 2  # çıktılar: [yangın var, duman var] (çok etiketli)
 
 
 class SimpleCNN(nn.Module):
