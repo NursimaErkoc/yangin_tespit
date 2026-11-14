@@ -111,6 +111,31 @@ py -3.12 -m venv .venv
 3. `python -m src.classical_baseline`
 4. `python -m src.cache_images` → `python -m src.train --model mobilenetv3 --seed 0`
 
+### AI For Mankind verisi (bağımsız duman testi / EDA için)
+
+Sürüm 1.0 (744 görüntü, Pascal VOC) kullanılıyor.
+
+```
+mkdir data\AFM_v1
+.venv\Scripts\gdown 1sEB77bfp2yMkgsSW9703vwDHol_cK6D5 -O data\AFM_v1fm_v1.zip
+.venv\Scripts\python -c "import zipfile; zipfile.ZipFile('data/AFM_v1/afm_v1.zip').extractall('data/AFM_v1/extracted')"
+.venv\Scripts\python -m src.eda_afm
+```
+
+Açıldıktan sonra yapı `data/AFM_v1/extracted/annotated_bounding_box_hpwren/{images,xmls}` olmalıdır. İndirme çalışmazsa [Drive bağlantısını](https://drive.google.com/file/d/1sEB77bfp2yMkgsSW9703vwDHol_cK6D5/view) tarayıcıdan indirip aynı yere koyun.
+
+### Yeni bilgisayarda kurulum özeti
+
+1. `git clone https://github.com/NursimaErkoc/yangin_tespit.git` ve klasöre girin.
+2. `py -3.12 -m venv .venv` ve `.venv\Scripts\python -m pip install -r requirements.txt`
+3. D-Fire'ı indirip `data/D-Fire/` altına açın.
+4. `python -m src.prepare_data --dfire_dir data/D-Fire` (`data/splits.csv` oluşur)
+5. (İsteğe bağlı) AI For Mankind'ı yukarıdaki gibi indirin.
+6. `python -m src.cache_images` (`data/cache224` oluşur)
+7. `python -m src.train --model mobilenetv3 --seed 0`; yarıda kalırsa `--resume` ekleyin.
+
+`data/`, `checkpoints/` ve `.venv/` GitHub'da yoktur; her bilgisayarda yeniden oluşturulur.
+
 ## 10. Kaynaklar
 
 - de Venâncio, P.V.A.B., Lisboa, A.C., Barbosa, A.V. (2022). A dataset for fire and smoke object detection. *Multimedia Tools and Applications*. [10.1007/s11042-022-13580-x](https://doi.org/10.1007/s11042-022-13580-x)
